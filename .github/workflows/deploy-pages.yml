@@ -36,7 +36,12 @@ jobs:
         run: npm run build
 
       - name: SPA fallback
-        run: cp dist/client/index.html dist/client/404.html
+        run: |
+          if [ -f dist/client/index.html ]; then
+            cp dist/client/index.html dist/client/404.html
+          else
+            echo "index.html not found in dist/client; skipping fallback copy"
+          fi
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
