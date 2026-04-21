@@ -170,6 +170,16 @@
     transform: scale(1.05);
     filter: drop-shadow(0 0 16px oklch(0.78 0.21 235 / 58%));
   }
+
+  .brand-wordmark {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+    font-weight: 600;
+    color: oklch(0.95 0.015 250);
+    text-shadow: 0 0 18px oklch(0.78 0.21 235 / 35%);
+    white-space: nowrap;
+    line-height: 1;
+  }
 }
 
 @keyframes float-particle {

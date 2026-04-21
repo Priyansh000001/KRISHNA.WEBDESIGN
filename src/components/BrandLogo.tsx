@@ -12,19 +12,41 @@ const sizeClass = {
   login: "h-24 w-64",
 };
 
+const labelClass = {
+  nav: "text-[12px] sm:text-[13px]",
+  footer: "text-[11px] sm:text-[12px]",
+  login: "hidden",
+};
+
 export function BrandLogo({ size = "nav", linked = true }: BrandLogoProps) {
   const isFullLogo = size === "login";
-  const logo = (
-    <span className={isFullLogo ? "inline-flex" : "brand-logo-shell"}>
+  const logo = isFullLogo ? (
+    <span className="inline-flex">
       <img
-        src={isFullLogo ? FULL_LOGO_SRC : MARK_LOGO_SRC}
+        src={FULL_LOGO_SRC}
         alt="KRISHNA.WEBDESIGN"
-        width={isFullLogo ? 931 : 512}
-        height={isFullLogo ? 757 : 512}
-        className={`brand-logo-image ${sizeClass[size]} ${
-          isFullLogo ? "rounded-xl object-contain" : "rounded-full object-cover"
-        }`}
+        width={931}
+        height={757}
+        className="brand-logo-image h-24 w-64 rounded-xl object-contain"
       />
+    </span>
+  ) : (
+    <span className="inline-flex items-center gap-2.5 sm:gap-3">
+      <span className="brand-logo-shell">
+        <img
+          src={MARK_LOGO_SRC}
+          alt="KRISHNA.WEBDESIGN"
+          width={512}
+          height={512}
+          className={`brand-logo-image ${sizeClass[size]} rounded-full object-cover`}
+        />
+      </span>
+      <span
+        className={`brand-wordmark ${labelClass[size]} max-[380px]:hidden`}
+        aria-hidden="true"
+      >
+        KRISHNA.WEBDESIGN
+      </span>
     </span>
   );
 
