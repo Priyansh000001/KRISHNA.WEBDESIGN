@@ -37,16 +37,17 @@ jobs:
 
       - name: SPA fallback
         run: |
-          if [ -f dist/client/index.html ]; then
-            cp dist/client/index.html dist/client/404.html
+          if [ -f dist/index.html ]; then
+            cp dist/index.html dist/404.html
           else
-            echo "index.html not found in dist/client; skipping fallback copy"
+            echo "index.html not found in dist; failing build"
+            exit 1
           fi
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: dist
 
   deploy:
     environment:

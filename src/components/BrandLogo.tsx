@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 const FULL_LOGO_SRC = "/krishna-webdesign-logo.jpeg";
 const MARK_LOGO_SRC = "/krishna-webdesign-mark.png";
 
@@ -35,12 +33,12 @@ export function BrandLogo({ size = "nav", linked = true }: BrandLogoProps) {
   }
 
   return (
-    <Link
-      to="/"
+    <a
+      href="#home"
       aria-label="KRISHNA.WEBDESIGN home"
       className="group inline-flex items-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
     >
       {logo}
-    </Link>
+    </a>
   );
 }

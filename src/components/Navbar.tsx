@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useRouterState } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
 import { MagneticButton } from "@/components/MagneticButton";
 
@@ -18,13 +17,12 @@ const navItems = [
 
 export function Navbar({ onOpenInquiry }: NavbarProps) {
   const [open, setOpen] = useState(false);
-  const { location } = useRouterState();
 
   useEffect(() => {
     setOpen(false);
-  }, [location.pathname]);
+  }, []);
 
-  const anchorBase = useMemo(() => (location.pathname === "/" ? "" : "/"), [location.pathname]);
+  const anchorBase = useMemo(() => "", []);
 
   return (
     <motion.header
