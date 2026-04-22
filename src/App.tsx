@@ -8,6 +8,8 @@ import { InquiryModal } from "@/components/InquiryModal";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { MagneticButton } from "@/components/MagneticButton";
 
+const ASSET_BASE = import.meta.env.BASE_URL;
+
 const services = [
   "Luxury Business Websites",
   "Conversion-Focused Landing Pages",
@@ -90,23 +92,22 @@ const showcase = [
   {
     title: "Cars Website",
     url: "https://cars-web-priyansh000001.netlify.app",
-    thumbnail: "https://image.thum.io/get/width/1200/noanimate/https://cars-web-priyansh000001.netlify.app",
+    thumbnail: `${ASSET_BASE}work-cars.jpg`,
   },
   {
     title: "Sample Gym Website",
     url: "https://semple-gym-webshite.netlify.app",
-    thumbnail: "https://image.thum.io/get/width/1200/noanimate/https://semple-gym-webshite.netlify.app",
+    thumbnail: `${ASSET_BASE}work-gym.jpg`,
   },
   {
     title: "Sample MG Bites",
     url: "https://semple-mg-bites.netlify.app",
-    thumbnail: "https://image.thum.io/get/width/1200/noanimate/https://semple-mg-bites.netlify.app",
+    thumbnail: `${ASSET_BASE}work-mg-bites.jpg`,
   },
   {
     title: "Puma Hungry For More",
     url: "https://puma-hungry-for-more-priyansh-20260410.netlify.app",
-    thumbnail:
-      "https://image.thum.io/get/width/1200/noanimate/https://puma-hungry-for-more-priyansh-20260410.netlify.app",
+    thumbnail: `${ASSET_BASE}work-puma.jpg`,
   },
 ];
 
@@ -362,6 +363,9 @@ export default function App() {
                     src={project.thumbnail}
                     alt={`${project.title} preview`}
                     loading="lazy"
+                    decoding="async"
+                    width={1100}
+                    height={640}
                     className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
