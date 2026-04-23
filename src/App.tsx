@@ -31,7 +31,7 @@ const trustPoints = [
 const pricingPlans = [
   {
     name: "Basic Website",
-    price: "₹12,990",
+    price: "₹12,999",
     popular: false,
     features: [
       "Clean business website",
