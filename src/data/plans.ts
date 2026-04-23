@@ -4,7 +4,7 @@ export const plans: Plan[] = [
   {
     name: "Basic Website",
     tagline: "Launch a clean, professional presence.",
-    price: "₹39,999",
+    price: "₹12,990",
     features: [
       "Domain Setup",
       "Hosting Setup",
