@@ -57,7 +57,7 @@ const pricingPlans = [
   },
   {
     name: "Standard 2D Website",
-    price: "₹54,999",
+    price: "₹44,999",
     popular: true,
     features: [
       "Advanced custom design",
@@ -70,7 +70,7 @@ const pricingPlans = [
   },
   {
     name: "Ultra Luxury UI/UX Website",
-    price: "₹79,999",
+    price: "₹69,999",
     popular: false,
     features: [
       "High-end custom interface",

@@ -16,7 +16,7 @@ export const plans: Plan[] = [
   {
     name: "Standard 2D Website",
     tagline: "Grow with admin tools and analytics.",
-    price: "₹54,999",
+    price: "₹44,999",
     popular: true,
     features: [
       "Everything in Basic",
@@ -30,7 +30,7 @@ export const plans: Plan[] = [
   {
     name: "Ultra Luxury UI/UX",
     tagline: "An award-winning, conversion-focused build.",
-    price: "₹79,999",
+    price: "₹69,999",
     features: [
       "Everything in Standard",
       "Ultra Luxury UI/UX",
